@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import ProductsList from "./Components/ProductsList";
 
 function App() {
   return (
     <div>
-      hi react
+      <ProductsList />
     </div>
   );
 }
