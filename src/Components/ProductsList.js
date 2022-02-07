@@ -3,14 +3,14 @@ const ProductsList = () => {
   const Products = useProducts();
 
   return (
-    <main>
-      <section>
+    <main class="flex justify-center">
+      <section class="mt-28 flex flex-col justify-center items-center w-9/12 ">
         {Products.map((p) => {
           return (
-            <ul>
-              <li>{p.model}</li>
+            <ul key={p.Price} class="flex justify-between w-full">
+              <li>{p.name}</li>
               <li>{p.brand}</li>
-              <li>{p.Price}</li>
+              <li>$ {p.Price}</li>
             </ul>
           );
         })}
