@@ -4,7 +4,6 @@ import { ThemeProvider } from "./Components/ThemeContext";
 import Background from "./Components/Background";
 import Toggle from "./Components/ThemeToggle";
 import ProductsProviders from "./Providers/ProductProvides";
-import Filter from "./Components/Filter";
 function App() {
   return (
     <ProductsProviders>
@@ -13,7 +12,6 @@ function App() {
           <div className="absolute right-0 top-0 mr-4 mt-4 md:mr-6 md:mt-6">
             <Toggle />
           </div>
-          <Filter />
           <ProductsList />
         </Background>
       </ThemeProvider>

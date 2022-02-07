@@ -1,7 +1,6 @@
 import SelectComponent from "../common/Select/SelectComponent";
 import { useState } from "react";
 import { useProductsAction } from "../Providers/ProductProvides";
-import Search from "../common/Search/Search";
 const Filter = () => {
   const dispatch = useProductsAction();
   const [sort, setSort] = useState("");
@@ -29,21 +28,22 @@ const Filter = () => {
     setFilter(selectedOption);
   };
   return (
-    <>
-    <Search filter={filter} />
+    <section class="flex justify-between items-center w-full">
       <SelectComponent
         value={sort}
         onChange={sortHandler}
         options={sortOptions}
         title="Sort By :"
+        
       />
       <SelectComponent
         value={filter}
         onChange={filterHandler}
         options={filterOptions}
         title="Order By : "
+        
       />
-    </>
+    </section>
   );
 };
 
